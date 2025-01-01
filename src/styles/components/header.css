@@ -1,6 +1,35 @@
 .header {
   display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
 }
 .header__logo {
   width: 300px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.header__list {
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+.header__list:hover {
+  color: white;
+  background-color: green;
+}
+.header__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
 }/*# sourceMappingURL=header.css.map */

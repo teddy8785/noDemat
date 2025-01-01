@@ -1,7 +1,7 @@
 import "../styles/components/header.css";
 import logo from "../assets/logonodemat.webP";
 
-function Header() {
+function Header({children}) {
   return (
     <header className="header">
       <img
@@ -9,6 +9,7 @@ function Header() {
         src={logo}
         alt="logo de noDemat"
       />
+      {children}
     </header>
   );
 }

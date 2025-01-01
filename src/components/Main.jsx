@@ -76,7 +76,6 @@ function Main() {
 
   return (
     <main>
-      <h1>Calendrier des sorties</h1>
       <div className="main__années">
         {années > 2025 && (
           <button onClick={removeAnnée}>
