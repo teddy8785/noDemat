@@ -22,6 +22,11 @@
       "Jeudi",
       "Vendredi",
       "Samedi"
-    ]
+    ],
+    "événements": {
+      "2025-01-01": {
+        "titre": "Sorties du 01/01/2025"
+      }
+    }
   }
 ]

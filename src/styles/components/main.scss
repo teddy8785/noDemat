@@ -107,8 +107,8 @@
         background-color: #f9f9f9;
         transition: background-color 0.3s ease;
 
-        &:hover {
-          background-color: #007bff;
+       &.has-event {
+          background-color: red;
           color: white;
         }
 

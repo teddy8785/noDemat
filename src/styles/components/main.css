@@ -89,8 +89,8 @@
   background-color: #f9f9f9;
   transition: background-color 0.3s ease;
 }
-.main__dates .main__dates-grid .main__jour-item:hover {
-  background-color: #007bff;
+.main__dates .main__dates-grid .main__jour-item.has-event {
+  background-color: red;
   color: white;
 }
 .main__dates .main__dates-grid .main__jour-item.empty {

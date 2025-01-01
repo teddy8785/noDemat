@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import Calendrier from './pages/Calendrier';
+import DetailsSorties from './pages/DetailsSorties';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/calendrier" element={<Calendrier />} />
+        <Route path="/event/:eventId" element={<DetailsSorties />} />
       </Routes>
     </Router>
   </React.StrictMode>

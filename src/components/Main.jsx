@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importer useNavigate pour la navigation
 import data from "../data.json";
 import "../styles/components/main.css";
 
 function Main() {
   const [années, setAnnées] = useState(2025);
   const [moisIndex, setMoisIndex] = useState(0);
+  const [selectedEvent, setSelectedEvent] = useState(null); // État pour stocker l'événement sélectionné
 
   const calendrier = data[0];
+  const navigate = useNavigate(); // Utiliser useNavigate pour la navigation
 
   // Fonction pour vérifier si l'année est bissextile
   const isBissextile = (année) => {
@@ -21,13 +24,13 @@ function Main() {
       31,
       30,
       31,
-      30, // Janvier - Juin
+      30,
       31,
       31,
       30,
       31,
       30,
-      31, // Juillet - Décembre
+      31,
     ];
     return moisJours[moisIndex];
   };
@@ -73,6 +76,25 @@ function Main() {
 
   // Le premier jour (premier jour du mois dans notre logique) devient un "mercredi" (2)
   const adjustedFirstDay = (firstDay + 6) % 7;  // Pour déplacer le dimanche à la fin et commencer par lundi
+
+  // Vérifier si un événement existe pour une date donnée
+  const hasEvent = (jour) => {
+    const dateKey = `${années}-${String(moisIndex + 1).padStart(2, "0")}-${String(jour).padStart(2, "0")}`;
+    return calendrier.événements.hasOwnProperty(dateKey); // Vérifie si un événement existe pour cette date
+  };
+
+  // Gestionnaire de clic pour chaque date (naviguer vers la page de l'événement)
+  const handleDateClick = (jour) => {
+    const dateKey = `${années}-${String(moisIndex + 1).padStart(2, "0")}-${String(jour).padStart(2, "0")}`;
+    const event = calendrier.événements[dateKey];
+
+    if (event) {
+      // Rediriger vers la page de détails de l'événement
+      navigate(`/event/${dateKey}`);
+    } else {
+      setSelectedEvent("Aucun événement pour cette date");
+    }
+  };
 
   return (
     <main>
@@ -135,13 +157,24 @@ function Main() {
             <div key={index} className="main__jour-item empty"></div>
           ))}
           {/* Afficher les dates du mois */}
-          {daysArray.map((jour, index) => (
-            <div key={index} className="main__jour-item">
+          {daysArray.map((jour) => (
+            <div
+              key={jour}
+              className={`main__jour-item ${hasEvent(jour) ? "has-event" : ""}`}
+              onClick={() => handleDateClick(jour)} // Ajout du clic
+              style={{ cursor: "pointer" }}
+            >
               <p>{jour}</p>
             </div>
           ))}
         </div>
       </div>
+
+      {selectedEvent && (
+        <div className="main__event">
+          <p>{selectedEvent}</p>
+        </div>
+      )}
     </main>
   );
 }
