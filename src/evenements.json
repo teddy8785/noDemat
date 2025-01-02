@@ -1,21 +1,43 @@
 {
   "evenements": {
-    "2025-03-06": {
-      "titre": "Sorties du 06/03/2025",
+    "2025-01-16": {
+      "titre": "Sortie du 16/01/2025",
       "jeux": [
         {
-          "id": "1",
+          "id": "16012025-1",
+          "titre": "Donkey Kong Country Return HD",
+          "description": "Version HD de Donkey Kong Country Return sorti précedemment sur Wii",
+          "plateformes": ["Switch"]
+        }
+      ]
+    },
+    "2025-01-17": {
+      "titre": "Sortie du 17/01/2025",
+      "jeux": [
+        {
+          "id": "17012025-1",
+          "titre": "Tales of Graces f Remastered",
+          "description": "Le remaster de Tales of Graces f sorti à l'époque sur PS3",
+          "plateformes": ["PS5", "Switch"]
+        }
+      ]
+    },
+    "2025-03-06": {
+      "titre": "Sortie du 06/03/2025",
+      "jeux": [
+        {
+          "id": "06032025-1",
           "titre": "Suikoden 1&2 HD remaster Gate Rune & Dunnan Unification Wars ",
-          "description": "Le remaster des deux premiers suikoden sorties sur PS1.",
+          "description": "Le remaster des deux premiers Suikoden sortis sur PS1.",
           "plateformes": ["PS5", "Switch", "Xbox x"]
         }
       ]
     },
     "2025-03-20": {
-      "titre": "Sorties du 20/03/2025",
+      "titre": "Sortie du 20/03/2025",
       "jeux": [
         {
-          "id": "2",
+          "id": "20032025-1",
           "titre": "Xenoblade X Définitive édition",
           "description": "L'édition définitive du Xenoblade sortie sur WII U",
           "plateformes": ["Switch"]
