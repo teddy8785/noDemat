@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Jeu from "../components/Jeu";
 import { useParams } from "react-router-dom";
 import data from "../evenements.json";
+import Footer from "../components/Footer";
 
 function DetailsSorties() {
   const { eventId } = useParams(); // Récupérer l'ID de l'événement depuis l'URL
@@ -21,6 +22,7 @@ function DetailsSorties() {
       </Header>
       {/* Passer l'événement à Jeu pour l'afficher */}
       <Jeu date={eventId} />
+      <Footer />
     </div>
   );
 }
