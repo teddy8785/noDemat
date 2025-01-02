@@ -1,0 +1,26 @@
+{
+  "evenements": {
+    "2025-03-06": {
+      "titre": "Sorties du 06/03/2025",
+      "jeux": [
+        {
+          "id": "1",
+          "titre": "Suikoden 1&2 HD remaster Gate Rune & Dunnan Unification Wars ",
+          "description": "Le remaster des deux premiers suikoden sorties sur PS1.",
+          "plateformes": ["PS5", "Switch", "Xbox x"]
+        }
+      ]
+    },
+    "2025-03-20": {
+      "titre": "Sorties du 20/03/2025",
+      "jeux": [
+        {
+          "id": "2",
+          "titre": "Xenoblade X Définitive édition",
+          "description": "L'édition définitive du Xenoblade sortie sur WII U",
+          "plateformes": ["Switch"]
+        }
+      ]
+    }
+  }
+}

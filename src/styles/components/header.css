@@ -22,7 +22,7 @@
 }
 .header__list:hover {
   color: white;
-  background-color: green;
+  background-color: black;
 }
 .header__title {
   position: absolute;

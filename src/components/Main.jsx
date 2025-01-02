@@ -1,22 +1,27 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Importer useNavigate pour la navigation
-import data from "../data.json";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import calendrierData from "../calendrier.json";
+import evenementsData from "../evenements.json";
 import "../styles/components/main.css";
 
 function Main() {
   const [années, setAnnées] = useState(2025);
   const [moisIndex, setMoisIndex] = useState(0);
-  const [selectedEvent, setSelectedEvent] = useState(null); // État pour stocker l'événement sélectionné
+  const navigate = useNavigate();
 
-  const calendrier = data[0];
-  const navigate = useNavigate(); // Utiliser useNavigate pour la navigation
+  // Utiliser useEffect pour initialiser l'état du mois et de l'année depuis localStorage
+  useEffect(() => {
+    const storedYear = localStorage.getItem("selectedYear");
+    const storedMonth = localStorage.getItem("selectedMonth");
 
-  // Fonction pour vérifier si l'année est bissextile
+    if (storedYear) setAnnées(parseInt(storedYear));
+    if (storedMonth) setMoisIndex(parseInt(storedMonth));
+  }, []);
+
   const isBissextile = (année) => {
     return (année % 4 === 0 && année % 100 !== 0) || année % 400 === 0;
   };
 
-  // Fonction pour obtenir les jours de chaque mois en fonction de l'année
   const getJours = (moisIndex) => {
     const moisJours = [
       31,
@@ -35,72 +40,70 @@ function Main() {
     return moisJours[moisIndex];
   };
 
-  // Fonction pour obtenir le jour de la semaine du 1er jour du mois
   const getFirstDayOfMonth = (moisIndex) => {
     const date = new Date(années, moisIndex, 1);
     return date.getDay(); // 0 = Dimanche, 1 = Lundi, ..., 6 = Samedi
   };
 
-  const addAnnée = () => {
-    setAnnées(années + 1);
-  };
-
-  const removeAnnée = () => {
-    if (années > 2025) {
-      setAnnées(années - 1);
-    }
-  };
-
   const nextMonth = () => {
-    if (moisIndex < calendrier.mois.length - 1) {
-      setMoisIndex(moisIndex + 1);
+    if (moisIndex < calendrierData.mois.length - 1) {
+      const newMonth = moisIndex + 1;
+      setMoisIndex(newMonth);
+      localStorage.setItem("selectedMonth", newMonth); // Sauvegarder le mois sélectionné
     }
   };
 
   const prevMonth = () => {
     if (moisIndex > 0) {
-      setMoisIndex(moisIndex - 1);
+      const newMonth = moisIndex - 1;
+      setMoisIndex(newMonth);
+      localStorage.setItem("selectedMonth", newMonth); // Sauvegarder le mois sélectionné
     }
   };
 
-  // Calculer les jours à afficher pour le mois courant
   const totalJours = getJours(moisIndex);
-  const firstDay = getFirstDayOfMonth(moisIndex); // Jour de la semaine du 1er jour du mois
-  const daysArray = Array.from({ length: totalJours }, (_, i) => i + 1); // Crée un tableau avec les dates du mois
+  const firstDay = getFirstDayOfMonth(moisIndex);
+  const daysArray = Array.from({ length: totalJours }, (_, i) => i + 1);
 
-  // Réorganiser les jours pour que l'affichage commence par Lundi
   const rearrangedDays = [
-    ...calendrier.jours.slice(1),  // Jours après lundi
-    calendrier.jours[0]            // Dimanche à la fin
+    ...calendrierData.jours.slice(1), // Jours après lundi
+    calendrierData.jours[0], // Dimanche à la fin
   ];
 
-  // Le premier jour (premier jour du mois dans notre logique) devient un "mercredi" (2)
-  const adjustedFirstDay = (firstDay + 6) % 7;  // Pour déplacer le dimanche à la fin et commencer par lundi
+  const adjustedFirstDay = (firstDay + 6) % 7;
 
-  // Vérifier si un événement existe pour une date donnée
   const hasEvent = (jour) => {
-    const dateKey = `${années}-${String(moisIndex + 1).padStart(2, "0")}-${String(jour).padStart(2, "0")}`;
-    return calendrier.événements.hasOwnProperty(dateKey); // Vérifie si un événement existe pour cette date
+    const dateKey = `${années}-${String(moisIndex + 1).padStart(
+      2,
+      "0"
+    )}-${String(jour).padStart(2, "0")}`;
+    return evenementsData.evenements.hasOwnProperty(dateKey);
   };
 
-  // Gestionnaire de clic pour chaque date (naviguer vers la page de l'événement)
   const handleDateClick = (jour) => {
-    const dateKey = `${années}-${String(moisIndex + 1).padStart(2, "0")}-${String(jour).padStart(2, "0")}`;
-    const event = calendrier.événements[dateKey];
+    const dateKey = `${années}-${String(moisIndex + 1).padStart(
+      2,
+      "0"
+    )}-${String(jour).padStart(2, "0")}`;
+    const event = evenementsData.evenements[dateKey];
 
     if (event) {
       // Rediriger vers la page de détails de l'événement
       navigate(`/event/${dateKey}`);
-    } else {
-      setSelectedEvent("Aucun événement pour cette date");
     }
+  };
+
+  // Sauvegarder l'année sélectionnée lorsque l'année change
+  const setAnnée = (nouvelleAnnée) => {
+    setAnnées(nouvelleAnnée);
+    localStorage.setItem("selectedYear", nouvelleAnnée); // Sauvegarder l'année sélectionnée
   };
 
   return (
     <main>
       <div className="main__années">
         {années > 2025 && (
-          <button onClick={removeAnnée}>
+          <button onClick={() => setAnnée(années - 1)}>
             <i
               className="fa-solid fa-arrow-left"
               style={{ color: " #000000" }}
@@ -110,7 +113,7 @@ function Main() {
         <div className="main__années-title">
           <h2>{années}</h2>
         </div>
-        <button onClick={addAnnée}>
+        <button onClick={() => setAnnée(années + 1)}>
           <i
             className="fa-solid fa-arrow-right"
             style={{ color: " #000000" }}
@@ -128,7 +131,7 @@ function Main() {
           </button>
         )}
         <div className="main__mois-title">
-          <h3>{calendrier.mois[moisIndex]}</h3>
+          <h3>{calendrierData.mois[moisIndex]}</h3>
         </div>
         {moisIndex !== 11 && (
           <button onClick={nextMonth}>
@@ -140,7 +143,6 @@ function Main() {
         )}
       </div>
 
-      {/* Affichage des jours de la semaine */}
       <div className="main__jours">
         {rearrangedDays.map((jour, index) => (
           <div key={index} className="main__jour-item">
@@ -149,19 +151,16 @@ function Main() {
         ))}
       </div>
 
-      {/* Affichage des dates du mois */}
       <div className="main__dates">
         <div className="main__dates-grid">
-          {/* Remplir les premiers jours vides pour aligner avec le bon jour de la semaine */}
           {Array.from({ length: adjustedFirstDay }).map((_, index) => (
             <div key={index} className="main__jour-item empty"></div>
           ))}
-          {/* Afficher les dates du mois */}
           {daysArray.map((jour) => (
             <div
               key={jour}
               className={`main__jour-item ${hasEvent(jour) ? "has-event" : ""}`}
-              onClick={() => handleDateClick(jour)} // Ajout du clic
+              onClick={() => handleDateClick(jour)}
               style={{ cursor: "pointer" }}
             >
               <p>{jour}</p>
@@ -169,12 +168,6 @@ function Main() {
           ))}
         </div>
       </div>
-
-      {selectedEvent && (
-        <div className="main__event">
-          <p>{selectedEvent}</p>
-        </div>
-      )}
     </main>
   );
 }
