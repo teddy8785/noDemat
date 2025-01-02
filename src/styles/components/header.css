@@ -36,7 +36,6 @@
 @media (max-width: 760px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
     position: initial;
   }
   .header__list {
@@ -44,20 +43,15 @@
   }
   .header__title {
     font-size: 32px;
-    top: 30%;
+    top: 35%;
   }
 }
 @media (max-width: 530px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
     position: initial;
   }
   .header__list {
     position: initial;
-  }
-  .header__title {
-    font-size: 30px;
-    top: 30%;
   }
 }/*# sourceMappingURL=header.css.map */

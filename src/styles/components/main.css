@@ -102,11 +102,6 @@
 }
 @media (max-width: 760px) {
   .main {
-    margin-top: 130px;
-  }
-}
-@media (max-width: 530px) {
-  .main {
-    margin-top: 150px;
+    margin-top: 180px;
   }
 }/*# sourceMappingURL=main.css.map */
