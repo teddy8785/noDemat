@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/noDemat/static/css/main.66869af2.css",
+    "main.css": "/noDemat/static/css/main.9c4d45bb.css",
     "main.js": "/noDemat/static/js/main.a27c753e.js",
     "static/media/logonodemat.webP": "/noDemat/static/media/logonodemat.9036090cfecce814164e.webP",
     "index.html": "/noDemat/index.html",
-    "main.66869af2.css.map": "/noDemat/static/css/main.66869af2.css.map",
+    "main.9c4d45bb.css.map": "/noDemat/static/css/main.9c4d45bb.css.map",
     "main.a27c753e.js.map": "/noDemat/static/js/main.a27c753e.js.map"
   },
   "entrypoints": [
-    "static/css/main.66869af2.css",
+    "static/css/main.9c4d45bb.css",
     "static/js/main.a27c753e.js"
   ]
 }
