@@ -18,4 +18,15 @@
     &__plateforme {
         font-size:18px;
     }
+
+    @media (max-width: 760px) {
+        & {
+            margin-top: 130px;
+            padding: 20px;
+           }
+
+        //    &__title {
+
+        //    }
+        }
 }

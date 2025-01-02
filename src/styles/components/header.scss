@@ -5,7 +5,7 @@
   position: relative;
 
   &__logo {
-    width: 300px;
+    width: 15rem;
   }
 
   &__nav {
@@ -36,5 +36,38 @@
     font-size: 50px;
     margin: 0;
     text-align: center;
+  }
+
+  @media (max-width: 760px) {
+    & {
+      flex-direction: column;
+      align-items: flex-start;
+      position: initial;
+    }
+    &__list {
+      position: initial;
+    }
+
+    &__title {
+      font-size: 32px;
+      top: 30%;
+    }
+  }
+
+  @media (max-width: 530px) {
+    & {
+      flex-direction: column;
+      align-items: flex-start;
+      position: initial;
+
+      &__list {
+        position: initial;
+      }
+
+      &__title {
+        font-size: 30px;
+        top: 30%;
+      }
+    }
   }
 }

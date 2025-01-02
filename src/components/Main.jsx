@@ -100,7 +100,7 @@ function Main() {
   };
 
   return (
-    <main>
+    <main className="main">
       <div className="main__années">
         {années > 2025 && (
           <button onClick={() => setAnnée(années - 1)}>
