@@ -43,6 +43,17 @@
           "plateformes": ["Switch"]
         }
       ]
+    },
+    "2025-03-21": {
+      "titre": "Sortie du 21/03/2025",
+      "jeux": [
+        {
+          "id": "21032025-1",
+          "titre": "The messenger",
+          "description": "",
+          "plateformes": ["PS5, Switch"]
+        }
+      ]
     }
   }
 }

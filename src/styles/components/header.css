@@ -19,6 +19,7 @@
   text-decoration: none;
   color: black;
   padding: 20px;
+  border: 2px solid black;
 }
 .header__list:hover {
   color: white;

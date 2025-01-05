@@ -1,0 +1,9 @@
+.accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 20px;
+}/*# sourceMappingURL=accueil.css.map */

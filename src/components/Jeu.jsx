@@ -9,7 +9,11 @@ function Jeu({ date }) {
       {event.jeux.map((jeu) => (
         <div key={jeu.id} className="jeu">
           <h3 className="jeu__title">{jeu.titre}</h3>
-          <p className="jeu__description">{jeu.description}</p>
+
+          {jeu.description && (
+            <p className="jeu__description">{jeu.description}</p>
+          )}
+
           <p className="jeu__plateforme">{jeu.plateformes.join(", ")}</p>
         </div>
       ))}
