@@ -8,6 +8,12 @@
           "titre": "Donkey Kong Country Return HD",
           "description": "Version HD de Donkey Kong Country Return sorti précedemment sur Wii",
           "plateformes": ["Switch"]
+        },
+        {
+          "id": "16012025-2",
+          "titre": "Astebros",
+          "description": "2ème jeu du studio français NEOFID après le très réussi Demons of Asteborg.",
+          "plateformes": ["PS5"]
         }
       ]
     },
@@ -52,6 +58,17 @@
           "titre": "The messenger",
           "description": "",
           "plateformes": ["PS5, Switch"]
+        }
+      ]
+    },
+    "2025-03-31": {
+      "titre": "Sortie du 31/03/2025",
+      "jeux": [
+        {
+          "id": "31032025-1",
+          "titre": "Les chevaliers de Baphomet Reforged",
+          "description": "Remake du célèbre point & click sortie sur PS1 et PC dans les années 90.",
+          "plateformes": ["PS5, Switch, Xbox one/S/X"]
         }
       ]
     }
