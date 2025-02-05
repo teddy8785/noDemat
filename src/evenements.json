@@ -28,6 +28,17 @@
         }
       ]
     },
+    "2025-02-27": {
+      "titre": "Sortie du 27/02/2025",
+      "jeux": [
+        {
+          "id": "27022025-1",
+          "titre": "Him, The smile & Bloom",
+          "description": "",
+          "plateformes": ["Switch"]
+        }
+      ]
+    },
     "2025-03-06": {
       "titre": "Sortie du 06/03/2025",
       "jeux": [
@@ -36,6 +47,17 @@
           "titre": "Suikoden 1&2 HD remaster Gate Rune & Dunnan Unification Wars ",
           "description": "Le remaster des deux premiers Suikoden sortis sur PS1.",
           "plateformes": ["PS5", "Switch", "Xbox x"]
+        }
+      ]
+    },
+    "2025-03-13": {
+      "titre": "Sortie du 13/03/2025",
+      "jeux": [
+        {
+          "id": "13032025-1",
+          "titre": "Beyond the ice palace 2",
+          "description": "",
+          "plateformes": ["PS5", "Switch"]
         }
       ]
     },
@@ -69,6 +91,17 @@
           "titre": "Les chevaliers de Baphomet Reforged",
           "description": "Remake du célèbre point & click sortie sur PS1 et PC dans les années 90.",
           "plateformes": ["PS5, Switch, Xbox one/S/X"]
+        }
+      ]
+    },
+    "2025-07-17": {
+      "titre": "Sortie du 17/07/2025",
+      "jeux": [
+        {
+          "id": "17072025-1",
+          "titre": "Bustafellows Season 2",
+          "description": "",
+          "plateformes": ["Switch"]
         }
       ]
     }
