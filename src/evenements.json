@@ -94,6 +94,17 @@
         }
       ]
     },
+    "2025-04-18": {
+      "titre": "Sortie du 18/04/2025",
+      "jeux": [
+        {
+          "id": "18042025-1",
+          "titre": "Lunar Remastered Colllection",
+          "description": "Versions remasterisées des JRPG Lunar : Silver Star Story et Lunar 2 : Eternal Blue",
+          "plateformes": ["PS4", "Switch"]
+        }
+      ]
+    },
     "2025-07-17": {
       "titre": "Sortie du 17/07/2025",
       "jeux": [
