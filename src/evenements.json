@@ -83,17 +83,6 @@
         }
       ]
     },
-    "2025-03-31": {
-      "titre": "Sortie du 31/03/2025",
-      "jeux": [
-        {
-          "id": "31032025-1",
-          "titre": "Les chevaliers de Baphomet Reforged",
-          "description": "Remake du célèbre point & click sortie sur PS1 et PC dans les années 90.",
-          "plateformes": ["PS5, Switch, Xbox one/S/X"]
-        }
-      ]
-    },
     "2025-04-18": {
       "titre": "Sortie du 18/04/2025",
       "jeux": [
@@ -113,6 +102,17 @@
           "titre": "Bustafellows Season 2",
           "description": "",
           "plateformes": ["Switch"]
+        }
+      ]
+    },
+    "2025-07-25": {
+      "titre": "Sortie du 25/07/2025",
+      "jeux": [
+        {
+          "id": "25072025-1",
+          "titre": "Les chevaliers de Baphomet Reforged",
+          "description": "Remake du célèbre point & click sortie sur PS1 et PC dans les années 90.",
+          "plateformes": ["PS5, Switch, Xbox one/S/X"]
         }
       ]
     }
