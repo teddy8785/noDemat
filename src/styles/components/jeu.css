@@ -1,0 +1,24 @@
+.jeu {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border: 1px black solid;
+}
+.jeu__title {
+  font-size: 30px;
+}
+.jeu__description {
+  font-size: 20px;
+}
+.jeu__plateforme {
+  font-size: 18px;
+}
+@media (max-width: 760px) {
+  .jeu {
+    margin-top: 130px;
+    padding: 20px;
+  }
+}/*# sourceMappingURL=jeu.css.map */

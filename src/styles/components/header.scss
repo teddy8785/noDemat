@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+
+  &__logo {
+    width: 15rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    border: 2px solid black;
+
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 760px) {
+    & {
+      flex-direction: column;
+      position: initial;
+    }
+    &__list {
+      position: initial;
+    }
+
+    &__title {
+      font-size: 32px;
+      top: 35%;
+    }
+  }
+
+  @media (max-width: 530px) {
+    & {
+      flex-direction: column;
+      position: initial;
+
+      &__list {
+        position: initial;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.main {
+ 
+  h1 {
+    text-align: center;
+     font-size: 50px;
+ }
+
+  &__années {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #007bff;
+      }
+
+      i {
+        color: #000000;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        color: gray;
+      } 
+    }
+  }
+
+  &__années-title {
+    width: 100px;
+  }
+
+  &__mois {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 20px;
+
+    h3 {
+      font-size: 2rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #007bff;
+      }
+
+      i {
+        color: #000000;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        color: gray;
+      }
+    }
+  }
+
+  &__mois-title {
+    width: 200px;
+  }
+
+  &__jours {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-top: 20px;
+
+    .main__jour-item {
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+
+    .main__jour-item.empty {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  &__dates {
+    margin-top: 20px;
+
+    .main__dates-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+
+      .main__jour-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s ease;
+
+       &.has-event {
+          background-color: red;
+          color: white;
+        }
+
+        &.empty {
+          border: none;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    & {
+     margin-top: 180px;
+    }
+  }
+}

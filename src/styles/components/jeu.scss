@@ -1,0 +1,32 @@
+.jeu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border: 1px black solid;
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__description {
+        font-size: 20px;
+    }
+
+    &__plateforme {
+        font-size:18px;
+    }
+
+    @media (max-width: 760px) {
+        & {
+            margin-top: 130px;
+            padding: 20px;
+           }
+
+        //    &__title {
+
+        //    }
+        }
+}
