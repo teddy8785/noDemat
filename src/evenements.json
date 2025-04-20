@@ -94,6 +94,106 @@
         }
       ]
     },
+    "2025-04-24": {
+      "titre": "Sortie du 24/04/2025",
+      "jeux": [
+        {
+          "id": "24042025-1",
+          "titre": "L'amerzone: Le Testament de L'explorateur",
+          "description": "Remake du jeu culte de Benoît Sokal",
+          "plateformes": ["PS5", "XBOX series X", "PC (Exclu Amazon)"]
+        }
+      ]
+    },
+    "2025-04-30": {
+      "titre": "Sortie du 30/04/2025",
+      "jeux": [
+        {
+          "id": "30042025-1",
+          "titre": "Bullet Hell Collection Volume 1",
+          "description": "Comprends les jeux Void Gore, Project Starship et Z-Warp dévellopés par Panda Indie Studio.",
+          "plateformes": ["Switch"]
+        }
+      ]
+    },
+    "2025-05-02": {
+      "titre": "Sortie du 02/05/2025",
+      "jeux": [
+        {
+          "id": "02052025-1",
+          "titre": "Spellcaster University",
+          "description": "",
+          "plateformes": ["PS5", "Switch"]
+        }
+      ]
+    },
+    "2025-05-09": {
+      "titre": "Sortie du 09/05/2025",
+      "jeux": [
+        {
+          "id": "09052025-1",
+          "titre": "Berserk Boy",
+          "description": "Jeu de plateforme inspiré de Mega Man.",
+          "plateformes": ["PS5", "Switch"]
+        },
+        {
+          "id": "09052025-2",
+          "titre": "Sanabi",
+          "description": "Jeu de Plateforme 2D",
+          "plateformes": ["Switch"]
+        }
+      ]
+    },
+    "2025-05-23": {
+      "titre": "Sortie du 23/05/2025",
+      "jeux": [
+        {
+          "id": "23052025-1",
+          "titre": "Elypse",
+          "description": "",
+          "plateformes": ["PS5", "Switch"]
+        },
+        {
+          "id": "23052025-2",
+          "titre": "Turnip Boy: Robs A Bank",
+          "description": "",
+          "plateformes": ["Switch"]
+        }
+      ]
+    },
+    "2025-05-30": {
+      "titre": "Sortie du 30/05/2025",
+      "jeux": [
+        {
+          "id": "30052025-1",
+          "titre": "Rebel Transmute",
+          "description": "Metroidvania 2D",
+          "plateformes": ["PS5", "Switch"]
+        }
+      ]
+    },
+    "2025-06-12": {
+      "titre": "Sortie du 12/06/2025",
+      "jeux": [
+        {
+          "id": "12062025-1",
+          "titre": "Kingdom Hearts All-in-One",
+          "description": "Regroupe Kingdom Hearts 1.5 + 2.5 ReMix, Kingdom Hearts HD 2.8 Final Chapter Prologue et kingdom Hearts 3 sans son DLC Re Mind.",
+          "plateformes": ["PS4"]
+        }
+      ]
+    },
+    "2025-07-11": {
+      "titre": "Sortie du 11/07/2025",
+      "jeux": [
+        {
+          "id": "11072025-1",
+          "titre": "Legacy of Kain: Soul Reaver 1&2 Remastered",
+          "description": "Remaster des 2 jeux cultes.",
+          "plateformes": ["PS5", "Switch"]
+        }
+      ]
+    },
     "2025-07-17": {
       "titre": "Sortie du 17/07/2025",
       "jeux": [
